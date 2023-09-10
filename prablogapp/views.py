@@ -8,4 +8,5 @@ def home(request):
 
 def blogbyurl(request, blog_name):
     blog = Blog.objects.get(title=blog_name)
+    print(blog.__dict__)
     return render(request, 'blog.html', {'blog':blog})
