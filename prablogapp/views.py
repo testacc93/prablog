@@ -3,7 +3,6 @@ from .models import Blog
 
 def home(request):
     blogs = Blog.objects.all()
-    print(dir(blogs[0].image_url.image_url.url))
     return render(request, 'home.html', {'blogs':blogs})
 
 
