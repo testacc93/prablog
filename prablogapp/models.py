@@ -12,7 +12,7 @@ class Image(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
-    image_url = models.ForeignKey(Image, on_delete=models.CASCADE)
+    choose_image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return self.title
